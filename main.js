@@ -73,13 +73,7 @@ function tiendaDeObjetos() {
             const producto = productosFiltrados[eleccion];
             if (personajeJugable.dinero >= producto.precio) {
                 console.log(`Te compraste: ${producto.nombre} y te salió: ${producto.precio} monedas`);
-
-                // Actualizar estado según el tipo de producto
-                if (producto.tipo === 'cura') {
-                    actualizarEstado(50, -producto.precio, 0, producto); 
-                } else {
-                    actualizarEstado(0, -producto.precio, 0, producto);
-                }
+                actualizarEstado(0, -producto.precio, 0, producto);
             } else {
                 console.log("No tenes las monedas necesarias para comprar eso.");
             }
