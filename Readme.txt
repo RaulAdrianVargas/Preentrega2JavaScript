@@ -1,3 +1,7 @@
+A tener en cuenta: Para poder entender el juego hay que abrir la consola con f12 al iniciar. 
+
+
+
 // 1ro Crear personaje
 	tendra un nombre que le dara el usuario
 	tendra:	vida inicial

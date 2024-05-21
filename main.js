@@ -53,8 +53,9 @@ function crearPersonaje() {
 }
 
 function tiendaDeObjetos() {
-    console.log("Esta es la tienda. ¿Cómo deseas buscar los productos?");
-    const tipoProducto = prompt("Ingrese el tipo de producto que desea buscar (cura, arma, comida):");
+    console.log("Esta es la tienda. ¿Que queres comprar?");
+    const tipoProducto = prompt("Buenas, esta es la tienda \n" +
+        "Ingrese el tipo de producto que desea buscar: (cura, arma, comida) ").toLowerCase();
     if (tipoProducto === null || tipoProducto.trim() === "") {
         console.log("Búsqueda cancelada o tipo de producto no válido.");
         eleccionJugador();
@@ -67,7 +68,7 @@ function tiendaDeObjetos() {
         console.log("Productos encontrados:");
         console.table(productosFiltrados);
 
-        const eleccion = parseInt(prompt('Ingrese el número del producto que desea comprar:')) - 1;
+        const eleccion = parseInt(prompt('Ingrese el número del producto que desea comprar:')) ;
 
         if (eleccion >= 0 && eleccion < productosFiltrados.length) {
             const producto = productosFiltrados[eleccion];
@@ -215,19 +216,34 @@ function continuar() {
         } else {
             console.log("Gracias por jugar :D");
             console.log("Terminaste tu aventura.");
+            alert("Gracias por jugar mi jueguito")
             seguirJugando = false;
         }
     }
 }
 
+function empezarAventura(){
+    let empezarJueguito = confirm("¿Te gustaria empezar a jugar?")
+    if(empezarJueguito){
+        alert("Perfecto, tene en cuenta que tenes que apretar f12 para ver la consola. Gracias")
+        crearPersonaje();
+        console.table(personajeJugable);
+
+        alert("Bienvenido al juego RPG de javascript, " + personajeJugable.nombre);
+
+        eleccionJugador();
+
+        continuar();
+    }
+    else{
+        alert("Muy bien, gracias por pasarte por mi app.")
+    }
+}
+
 //-----------------------------------------------------------------------------------
 // Aca inicializa el juego
-crearPersonaje();
+alert("Bienvenido a mi primer juego RPG de JavaScript")
 
-console.table(personajeJugable);
+empezarAventura();
 
-console.log("Bienvenido al juego RPG de javascript " + personajeJugable.nombre);
 
-eleccionJugador();
-
-continuar();
