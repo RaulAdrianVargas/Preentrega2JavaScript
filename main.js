@@ -1,3 +1,4 @@
+(function() {
 // Declaracion de objeto jugador
 let personajeJugable = {
     nombre: "",
@@ -247,4 +248,4 @@ alert("Bienvenido a mi primer juego RPG de JavaScript")
 
 empezarAventura();
 
-
+})();
