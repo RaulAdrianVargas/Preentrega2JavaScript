@@ -118,6 +118,7 @@ function filtrarEnMochilaPorTipo(tipoProducto) {
 function eleccionJugador() {
     console.log("Y ahora... ¿Que sigue?");
     let respuesta = parseInt(prompt(
+        "¿Que te gustaria hacer?\n"+
         "1. Descansar un rato\n" +
         "2. Ir a una tienda\n "+
         "3. Aventurarse a lo desconocido\n" +
@@ -215,8 +216,8 @@ function continuar() {
             mostrarEstatus();
         } else {
             console.log("Gracias por jugar :D");
-            console.log("Terminaste tu aventura.");
             alert("Gracias por jugar mi jueguito")
+            console.log("Terminaste tu aventura.");
             seguirJugando = false;
         }
     }
