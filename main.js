@@ -227,7 +227,10 @@ function continuar() {
 function empezarAventura(){
     let empezarJueguito = confirm("¿Te gustaria empezar a jugar?")
     if(empezarJueguito){
-        alert("Perfecto, tene en cuenta que tenes que apretar f12 para ver la consola. Gracias")
+        alert("Perfecto.\n"+
+        "Tene en cuenta que tenes que apretar f12 para ver la consola.\n"+ 
+        "Tambien, puede que la primera vez la consola no muestre lo que deberia, por favor recargar con f5 si eso pasa.\n"+
+        "Disculpe las dificultades para iniciar, ya lo solucionare en la version 1.2 :D. Gracias")
         crearPersonaje();
         console.table(personajeJugable);
 

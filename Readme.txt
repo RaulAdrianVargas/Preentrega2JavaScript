@@ -1,4 +1,6 @@
-A tener en cuenta: Para poder entender el juego hay que abrir la consola con f12 al iniciar. 
+A tener en cuenta: 
+	Para poder entender el juego hay que abrir la consola con f12 al iniciar. 
+	Es posible que al iniciar por primera vez la consola no muestre lo que deberia, perdon ya vendra la version 1.2 que solucionara esos problemas molestos :c
 
 
 
