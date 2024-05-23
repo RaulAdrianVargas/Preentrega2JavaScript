@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
 }
 
 body{
@@ -41,15 +45,16 @@ body{
 }
 
 .btnMenu{
-    background: #727272;
-    color: #fff;
-    width: 100%;
-    padding: .5rem 0;
+    background: #fbfbfe;
+    color: #2a3b47;
+    width: 60%;
+    padding: .8rem 0;
     margin-bottom: .75rem;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+    /* text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8); */
     font-size: 1.25rem;
     letter-spacing: .025em;
-    border: 2px solid rgba(0,0,0,1);
+    border: none;
+    border-radius: 55%;
     box-shadow: inset 3px 3px 0 rgba(255,255,255,0.5),
                 inset -3px -3px 0 rgba(0,0,0,0.5);
     cursor: pointer;
@@ -59,7 +64,34 @@ body{
     background: rgba(115, 107, 221, 1);
 }
 
-.btnMenu:focus{
+/* .btnMenu:focus{
     color: rgb(246, 246, 44 );
     outline: none;
+} */
+
+
+.dark-mode {
+    background-image: url(img/fondodark.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.dark-mode button{
+    background: #161616;
+    color: #6fb1bd;
+    width: 60%;
+    padding: .8rem 0;
+    margin-bottom: .75rem;
+    /* text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8); */
+    font-size: 1.25rem;
+    letter-spacing: .025em;
+    border: none;
+    border-radius: 55%;
+    box-shadow: inset 3px 3px 0 rgba(255,255,255,0.5),
+                inset -3px -3px 0 rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.dark-mode .btnMenu:hover{
+    background: rgb(39, 34, 53);
 }
