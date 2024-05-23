@@ -64,11 +64,6 @@ body{
     background: rgba(115, 107, 221, 1);
 }
 
-/* .btnMenu:focus{
-    color: rgb(246, 246, 44 );
-    outline: none;
-} */
-
 
 .dark-mode {
     background-image: url(img/fondodark.jpg);
@@ -76,7 +71,7 @@ body{
     overflow: hidden;
 }
 
-.dark-mode button{
+.dark-mode .btnMenu{
     background: #161616;
     color: #6fb1bd;
     width: 60%;
@@ -95,3 +90,22 @@ body{
 .dark-mode .btnMenu:hover{
     background: rgb(39, 34, 53);
 }
+
+#contenedorAcercaDe{
+    margin: 20px;
+    padding: 20px;
+}
+
+/* #contenedorAcercaDe{
+    display: none;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-top: 10px ;
+    z-index: 100;
+} */

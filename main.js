@@ -23,6 +23,7 @@ const body = document.body;
         
     }
 
+
     //mejorar experiencia de usuario.MUY IMPORTANTE
     function inicializarModoOscuro() {
         const modoOscuroGuardado = localStorage.getItem('modoOscuro');
@@ -36,6 +37,46 @@ const body = document.body;
     inicializarModoOscuro();
 
     botonToggle.addEventListener('click', alternarModoOscuro);
+
+
+function mostrarDivAcercaDe() {
+    const contenedorAcercaDe = document.getElementById("contenedorAcercaDe");
+
+    // Crear el div de información
+    const divAcercaDe = document.createElement("div");
+    divAcercaDe.className = "divSaberMas";
+    divAcercaDe.innerHTML = '<h2>Bienvenido, aquí te voy a contar un poquito de lo que es mi proyecto de JavaScript</h2>\n<p>Este es un párrafo de prueba con lo que voy a escribir.</p>';
+
+    // Estilizar el div creado dinámicamente
+    divAcercaDe.style.backgroundColor = "#f0f0f0";
+    divAcercaDe.style.border = "1px solid #ccc";
+    divAcercaDe.style.padding = "10px";
+    divAcercaDe.style.position = "absolute";
+    divAcercaDe.style.top = "50%";
+    divAcercaDe.style.left = "50%";
+    divAcercaDe.style.transform = "translate(-50%, -50%)";
+    divAcercaDe.style.width = "300px";
+    divAcercaDe.style.textAlign = "center";
+
+    // Botón para cerrar el div
+    const botonCerrar = document.createElement("button");
+    botonCerrar.textContent = "Cerrar";
+    botonCerrar.style.position = "absolute";
+    botonCerrar.style.bottom = "10px";
+    botonCerrar.style.right = "10px";
+    botonCerrar.addEventListener("click", function() {
+        contenedorAcercaDe.removeChild(divAcercaDe); // Quitar el div al hacer clic en el botón "Cerrar"
+    });
+    divAcercaDe.appendChild(botonCerrar);
+
+    // Agregar el div al contenedor
+    contenedorAcercaDe.appendChild(divAcercaDe);
+}
+
+// Event listener para mostrar el div al hacer clic en "Acerca del juego"
+document.getElementById("btnAcercaDe").addEventListener("click", mostrarDivAcercaDe);
+
+
 
 
 // Declaracion de objeto jugador
