@@ -1,4 +1,7 @@
-(function() {
+document.addEventListener('DOMContentLoaded', (event) => {
+const startButton = document.getElementById("iniciarJuego");
+
+
 // Declaracion de objeto jugador
 let personajeJugable = {
     nombre: "",
@@ -247,8 +250,5 @@ function empezarAventura(){
 
 //-----------------------------------------------------------------------------------
 // Aca inicializa el juego
-alert("Bienvenido a mi primer juego RPG de JavaScript")
-
-empezarAventura();
-
-})();
+    startButton.addEventListener("click", empezarAventura)
+});
